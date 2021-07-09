@@ -1,4 +1,4 @@
-##View it live [here](https://p5-sort.netlify.app/)
+## View it live [here](https://p5-sort.netlify.app/)
 
 ## This project was made with Create React App and P5.js
 
