@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
 
-function App() {
+import Tabs from './components/Tabs'
+import Menu from './components/Menu'
+import Side from './components/Side'
+import useStyles from './components/styles'
+
+const App = () => {
+  const classes = useStyles()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Menu />
+
+      <Grid container className={classes.main} alignItems='stretch'>
+        <Grid item xs={12} md={3}>
+          <Side />
+        </Grid>
+
+        <Grid item xs={12} md={9}>
+          <Tabs />
+        </Grid>
+      </Grid>
+    </>
+  )
 }
 
-export default App;
+export default App
