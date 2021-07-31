@@ -18,7 +18,9 @@ const Sort = ({ width, speed, type, arr, setComp, setSwaps, setTime }) => {
   }, [])
 
   useEffect(() => {
-    setTime(((q - p) / 1000).toFixed(2))
+    return () => {
+      setTime(((q - p) / 1000).toFixed(2))
+    }
   }, [p, q, setTime])
 
   const setup = async (p5, parentRef) => {
