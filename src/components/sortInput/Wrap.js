@@ -9,9 +9,9 @@ import Typography from '@material-ui/core/Typography'
 
 import Sort from './SortF'
 import Blank from './Blank'
-import useStyles from './styles'
-import { marks } from '../Data/marks'
-import { w, s } from '../Data/sort'
+import useStyles from '../styles'
+import { marks } from '../../Data/marks'
+import { w, s } from '../../Data/sort'
 
 const Wrap = ({ type }) => {
   const classes = useStyles()

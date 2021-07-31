@@ -21,10 +21,6 @@ const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
 
   useEffect(() => {
     return () => {
-<<<<<<< HEAD
-      setTime(((q - p) / 1000).toFixed(2))
-    }
-=======
       setCompp(comp)
       setSwapps(swaps)
     }
@@ -32,7 +28,6 @@ const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
 
   useEffect(() => {
     setTime(((q - p) / 1000).toFixed(2))
->>>>>>> input
   }, [p, q, setTime])
 
   const setup = async (p5, parentRef) => {
