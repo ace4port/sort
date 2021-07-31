@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
       outline: '1px solid slategrey',
     },
   },
+
   //nav elements
   logo: {
     flexGrow: 1,
@@ -37,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textTransform: 'capitalize',
   },
-  //side
   side: {
     padding: '15px',
   },
@@ -130,6 +130,24 @@ const useStyles = makeStyles((theme) => ({
 
   sortDesc: {
     padding: '20px 0 0 10px',
+  },
+
+  tcon: {
+    margin: '20px',
+    display: 'flex',
+    justifyContent: 'flex-start',
+  },
+
+  tspForm: {
+    width: '10rem',
+    padding: '5rem',
+    display: 'flex',
+    flexDirection: 'column',
+    // gridGap: '40px',
+  },
+  tspF: {
+    padding: '5rem',
+    margin: '5rem',
   },
 }))
 

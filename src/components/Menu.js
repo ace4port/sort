@@ -21,10 +21,10 @@ const Menu = () => {
           <NavLink to='/'>AlgoVis</NavLink>
         </Typography>
 
-        <NavLink to='/sortI' className={classes.lnk}>
+        <NavLink to='/sortR' className={classes.lnk}>
           <Button color='inherit'>Sort Random</Button>
         </NavLink>
-        <NavLink to='/sortR' className={classes.lnk}>
+        <NavLink to='/sortI' className={classes.lnk}>
           <Button color='inherit'>Sort Input</Button>
         </NavLink>
 
@@ -32,9 +32,10 @@ const Menu = () => {
           <Button color='inherit'>Compare</Button>
         </NavLink>
 
-        <Button color='inherit' disabled>
-          TSP
-        </Button>
+        <NavLink to='/lex' className={classes.lnk}>
+          <Button color='inherit'>TSP</Button>
+        </NavLink>
+
         <Button color='inherit' disabled>
           Graphs
         </Button>

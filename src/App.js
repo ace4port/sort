@@ -9,6 +9,7 @@ import Error from './pages/Error'
 import SortI from './pages/SortInput'
 import SortR from './pages/SortRandom'
 import Compare from './pages/Compare'
+import Lex from './pages/Lex'
 // import Trav from './Pages/Tsm'
 // import Graph from './Pages/Graph'
 // import Tree from './Pages/Tree'
@@ -35,15 +36,15 @@ const App = () => {
           <Compare />
         </Route>
 
+        <Route exact path='/lex'>
+          <Lex />
+        </Route>
         {/* 
         <Route exact path='/graph'>
           <Graph />
         </Route>
         <Route exact path='/tree'>
           <Tree />
-        </Route>
-        <Route exact path='/lex'>
-          <Tsp />
         </Route>
         <Route exact path='/tsp'>
           <Trav />

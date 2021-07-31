@@ -10,9 +10,11 @@ let arr = []
 
 const Compare = () => {
   const classes = useStyles()
+
   const [cmp1, setCmp1] = useState(0)
   const [cmp2, setCmp2] = useState(1)
   const [controller, setController] = useState(false)
+
   const algos = ['Bubble', 'Insertion', 'Selection', 'Quick', 'Merge']
 
   const compare = () => setController((state) => !state)

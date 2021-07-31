@@ -8,6 +8,7 @@ import useStyles from '../styles'
 
 const Form = ({ cmp1, setCmp1, cmp2, setCmp2, algos, compare, controller }) => {
   const classes = useStyles()
+
   return (
     <form className={classes.f}>
       <FormControl variant='filled' className={classes.f1}>
