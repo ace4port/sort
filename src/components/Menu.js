@@ -6,8 +6,8 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import BarChart from '@material-ui/icons/BarChart'
-
 import useStyles from './styles'
+import { NavLink } from 'react-router-dom'
 
 const Menu = () => {
   const classes = useStyles()
@@ -18,14 +18,20 @@ const Menu = () => {
           <BarChart />
         </IconButton>
         <Typography variant='h5' className={classes.logo}>
-          AlgoVis
+          <NavLink to='/'>AlgoVis</NavLink>
         </Typography>
 
-        <Button color='inherit'>Sort</Button>
-        <Button color='inherit'>Sort Input</Button>
-        <Button color='inherit' disabled>
-          Compare
-        </Button>
+        <NavLink to='/sortI' className={classes.lnk}>
+          <Button color='inherit'>Sort Random</Button>
+        </NavLink>
+        <NavLink to='/sortR' className={classes.lnk}>
+          <Button color='inherit'>Sort Input</Button>
+        </NavLink>
+
+        <NavLink to='/compare' className={classes.lnk}>
+          <Button color='inherit'>Compare</Button>
+        </NavLink>
+
         <Button color='inherit' disabled>
           TSP
         </Button>

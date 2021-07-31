@@ -17,6 +17,14 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     flexGrow: 1,
   },
+  lnk: {
+    color: 'white',
+    textDecoration: 'none',
+    borderRadius: '4px',
+    '&:hover': {
+      backgroundColor: 'rgb(140, 190, 9)',
+    },
+  },
 
   //ater nav
   paper: {
@@ -29,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textTransform: 'capitalize',
   },
+  //side
   side: {
     padding: '15px',
   },
@@ -39,8 +48,21 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: 'blur(5px)',
     margin: '4px 5px ',
     padding: '0px 5px',
+    // width: '100%',
+    '&:after': {
+      margin: '20px',
+      padding: '20px',
+    },
   },
-
+  tabTop: {
+    marginTop: '2px',
+  },
+  btnContainer: {
+    position: 'absolute',
+    top: '490px',
+    right: '30px',
+    zIndex: '2',
+  },
   tabBtn: {
     position: 'absolute',
     top: '490px',
@@ -88,6 +110,22 @@ const useStyles = makeStyles((theme) => ({
   slider1: {
     marginTop: '25px',
     width: '200px',
+  },
+
+  f: {
+    display: 'inline',
+  },
+  f1: {
+    width: '12rem',
+    padding: '1rem 0rem 1rem 0.5rem',
+  },
+  btnCmp: {
+    width: '7em',
+    margin: '1.2rem 1rem',
+  },
+
+  s: {
+    padding: '0 4px 0 6px',
   },
 
   sortDesc: {

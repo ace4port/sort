@@ -1,29 +1,58 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid'
-
-// import Tabs from './components/sortComps/Tabs'
-import Tabs from './components/sortInput/Tabs'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Menu from './components/Menu'
-import Side from './components/Side'
-import useStyles from './components/styles'
+
+//import Pages
+import Home from './pages/Home'
+import Error from './pages/Error'
+
+import SortI from './pages/SortInput'
+import SortR from './pages/SortRandom'
+import Compare from './pages/Compare'
+// import Trav from './Pages/Tsm'
+// import Graph from './Pages/Graph'
+// import Tree from './Pages/Tree'
+// import Tsp from './Pages/Tsp'
 
 const App = () => {
-  const classes = useStyles()
   return (
-    <>
+    <Router>
       <Menu />
+      <Switch>
+        <Router exact path='/'>
+          <Home />
+        </Router>
 
-      <Grid container className={classes.main} alignItems='stretch'>
-        <Grid item xs={12} md={3}>
-          <Side />
-        </Grid>
+        <Route exact path='/sorti'>
+          <SortI />
+        </Route>
 
-        <Grid item xs={12} md={9}>
-          <Tabs />
-        </Grid>
-      </Grid>
-    </>
+        <Route exact path='/sortr'>
+          <SortR />
+        </Route>
+
+        <Route exact path='/compare'>
+          <Compare />
+        </Route>
+
+        {/* 
+        <Route exact path='/graph'>
+          <Graph />
+        </Route>
+        <Route exact path='/tree'>
+          <Tree />
+        </Route>
+        <Route exact path='/lex'>
+          <Tsp />
+        </Route>
+        <Route exact path='/tsp'>
+          <Trav />
+        </Route> */}
+        <Route path='*'>
+          <Error />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
-
 export default App
