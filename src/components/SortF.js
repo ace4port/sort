@@ -23,8 +23,8 @@ const Sort = ({ width, speed, type, arr, setComp, setSwaps, setTime }) => {
 
   const setup = async (p5, parentRef) => {
     p5.createCanvas(500, 400).parent(parentRef)
-    values = new Array(p5.width / width)
-    for (let i = 0; i < values.length; i++) values[i] = arr[i]
+    values = new Array(arr.length)
+    for (let i = 0; i < arr.length; i++) values[i] = parseInt(arr[i])
 
     setTimeout(() => {
       soort(p5)
@@ -46,7 +46,7 @@ const Sort = ({ width, speed, type, arr, setComp, setSwaps, setTime }) => {
 
   const draw = (p5) => {
     p5.background(0)
-    let w = width
+    let w = width * 3
     for (let i = 0; i < values.length; i++) {
       clr[i] === 0
         ? p5.fill(250, 250, 0)
@@ -57,8 +57,9 @@ const Sort = ({ width, speed, type, arr, setComp, setSwaps, setTime }) => {
         : clr[i] === 3
         ? p5.fill(100, 200, 220)
         : p5.fill(255, 0, 255)
-      p5.rect(i * w, p5.height - values[i], w, values[i])
+      p5.rect(i * w, p5.height - values[i] * 20, w, values[i] * 20)
     }
+    console.log(values)
   }
 
   const bubble = async (arr) => {
