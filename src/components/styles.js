@@ -13,9 +13,18 @@ const useStyles = makeStyles((theme) => ({
       outline: '1px solid slategrey',
     },
   },
+
   //nav elements
   logo: {
     flexGrow: 1,
+  },
+  lnk: {
+    color: 'white',
+    textDecoration: 'none',
+    borderRadius: '4px',
+    '&:hover': {
+      backgroundColor: 'rgb(140, 190, 9)',
+    },
   },
 
   //ater nav
@@ -39,8 +48,21 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: 'blur(5px)',
     margin: '4px 5px ',
     padding: '0px 5px',
+    // width: '100%',
+    '&:after': {
+      margin: '20px',
+      padding: '20px',
+    },
   },
-
+  tabTop: {
+    marginTop: '2px',
+  },
+  btnContainer: {
+    position: 'absolute',
+    top: '490px',
+    right: '30px',
+    zIndex: '2',
+  },
   tabBtn: {
     position: 'absolute',
     top: '490px',
@@ -90,8 +112,42 @@ const useStyles = makeStyles((theme) => ({
     width: '200px',
   },
 
+  f: {
+    display: 'inline',
+  },
+  f1: {
+    width: '12rem',
+    padding: '1rem 0rem 1rem 0.5rem',
+  },
+  btnCmp: {
+    width: '7em',
+    margin: '1.2rem 1rem',
+  },
+
+  s: {
+    padding: '0 4px 0 6px',
+  },
+
   sortDesc: {
     padding: '20px 0 0 10px',
+  },
+
+  tcon: {
+    margin: '20px',
+    display: 'flex',
+    justifyContent: 'flex-start',
+  },
+
+  tspForm: {
+    width: '10rem',
+    padding: '5rem',
+    display: 'flex',
+    flexDirection: 'column',
+    // gridGap: '40px',
+  },
+  tspF: {
+    padding: '5rem',
+    margin: '5rem',
   },
 }))
 

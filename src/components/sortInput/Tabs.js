@@ -36,7 +36,7 @@ export default function IconTabs() {
           className={classes.tabBtn}
           onClick={() => setVisualize((state) => !state)}
         >
-          {!visualize ? 'Visualize' : 'Go back'}
+          {!visualize ? 'Enter values >' : '< Read info'}
         </Button>
 
         <Tabs

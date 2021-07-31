@@ -37,7 +37,7 @@ export default function IconTabs() {
           className={classes.tabBtn}
           onClick={() => setVisualize((state) => !state)}
         >
-          {!visualize ? 'Visualize using random values' : 'Read description'}
+          {!visualize ? 'Visualize using random values ->' : '<- Read description'}
         </Button>
 
         <Tabs
