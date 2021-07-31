@@ -3,19 +3,28 @@ import Sketch from 'react-p5'
 
 let values = []
 let clr = []
+let sortT
 
-const Sort = ({ width, speed, type, arr, setComp, setSwaps, setTime }) => {
+const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
   const [p, setP] = useState(0)
   const [q, setQ] = useState(0)
+  const [comp, setComp] = useState(0)
+  const [swaps, setSwaps] = useState(0)
 
   useEffect(() => {
     setP(performance.now())
-    return () =>
-      setTimeout(
-        clr.forEach((e) => (e = -1)),
-        0
-      )
+    return () => {
+      clr.forEach((e) => (e = -1))
+      clearTimeout(sortT)
+    }
   }, [])
+
+  useEffect(() => {
+    return () => {
+      setCompp(comp)
+      setSwapps(swaps)
+    }
+  }, [comp, swaps, setCompp, setSwapps])
 
   useEffect(() => {
     setTime(((q - p) / 1000).toFixed(2))
@@ -26,7 +35,7 @@ const Sort = ({ width, speed, type, arr, setComp, setSwaps, setTime }) => {
     values = new Array(arr.length)
     for (let i = 0; i < arr.length; i++) values[i] = parseInt(arr[i])
 
-    setTimeout(() => {
+    sortT = setTimeout(() => {
       soort(p5)
       setTimeout(() => setQ(performance.now()), 0)
     }, 0)
@@ -73,6 +82,7 @@ const Sort = ({ width, speed, type, arr, setComp, setSwaps, setTime }) => {
       }
       clr[i] = -1
     }
+    return
   }
 
   const insertion = async (arr) => {

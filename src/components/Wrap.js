@@ -20,8 +20,8 @@ const Wrap = ({ type }) => {
   const [array, setArray] = useState('19 9 5 7 4 5 2 12 7 7 1 4 9 12 17')
 
   const width = 4
-  const [wd, setWd] = useState(w[width])
   const speed = 4
+  const [wd, setWd] = useState(w[width])
 
   const [comp, setComp] = useState(0)
   const [swaps, setSwaps] = useState(0)
@@ -37,6 +37,12 @@ const Wrap = ({ type }) => {
   }, [controller])
   const a = array.split(' ')
 
+  const stop = () => {
+    setController(!controller)
+    setComp(0)
+    // set
+  }
+
   return (
     <Grid container direction='row' alignItems='stretch'>
       <Grid item xs={7} className={classes.cnv}>
@@ -48,8 +54,8 @@ const Wrap = ({ type }) => {
             speed={s[speed]}
             type={type}
             arr={a}
-            setComp={setComp}
-            setSwaps={setSwaps}
+            setCompp={setComp}
+            setSwapps={setSwaps}
             setTime={setTime}
           />
         )}
@@ -66,13 +72,7 @@ const Wrap = ({ type }) => {
             Generate
           </Button> */}
           <br />
-          <Button
-            className={classes.btn}
-            variant='contained'
-            color='primary'
-            type='submit'
-            onClick={() => setController(!controller)}
-          >
+          <Button className={classes.btn} variant='contained' color='primary' type='submit' onClick={stop}>
             {controller ? 'Stop' : 'Sort'}
           </Button>
 
