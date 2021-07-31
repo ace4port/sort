@@ -1,35 +1,24 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Sketch from 'react-p5'
 
-let values = []
-let clr = []
+let values = [20, 10, 7]
 
-const Blank = ({ width, setArr }) => {
+const Blank = ({ width = 20, arr }) => {
   const setup = async (p5, parentRef) => {
     p5.createCanvas(500, 400).parent(parentRef)
-    gen()
   }
-  const gen = (p5) => {
-    values = new Array(500)
-    for (let i = 0; i < values.length; i++) {
-      values[i] = Math.ceil(Math.random() * 400)
-      clr[i] = -1
-    }
-  }
-
-  useEffect(() => {
-    gen(width)
-    setArr(values)
-  }, [width, setArr])
+  values = arr
 
   const draw = (p5) => {
     p5.background(0)
-    let w = width
+    let w = width * 3
+
+    p5.fill(250, 0, 250)
     for (let i = 0; i < values.length; i++) {
-      p5.fill(250, 0, 250)
-      p5.rect(i * w, p5.height - values[i], w, values[i])
+      p5.rect(i * w, p5.height - values[i] * 20, w, values[i] * 20)
     }
   }
+
   return <Sketch setup={setup} draw={draw} />
 }
 

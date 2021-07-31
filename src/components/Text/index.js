@@ -13,7 +13,7 @@ export const Bubble = () => {
       <hr />
       <Typography>
         This simple algorithm performs <b>poorly</b> in real world use and is used primarily as an
-        <b>educational tool</b>
+        <b> educational tool. </b>
         Bubble sort has a <b>worst-case</b> and <b>average complexity</b> of
         <strong>
           О(n<sup>2</sup>).

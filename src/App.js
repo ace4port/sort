@@ -1,7 +1,7 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
 
-import Tabs from './components/Tabs'
+import Tabs from './components/sortComps/Tabs'
 import Menu from './components/Menu'
 import Side from './components/Side'
 import useStyles from './components/styles'

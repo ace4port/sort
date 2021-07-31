@@ -6,6 +6,7 @@ import Tab from '@material-ui/core/Tab'
 import Tabs from '@material-ui/core/Tabs'
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
+
 // //icons
 import BubbleChart from '@material-ui/icons/BubbleChart'
 import InsertChart from '@material-ui/icons/InsertChart'
@@ -13,9 +14,9 @@ import MergeType from '@material-ui/icons/MergeType'
 import AccessTime from '@material-ui/icons/AccessTime'
 import ArrowUpward from '@material-ui/icons/ArrowUpward'
 
-import { Bubble, Insertion, Selection, Quick, Merge } from './Text'
+import { Bubble, Insertion, Selection, Quick, Merge } from '../Text'
 import Wrap from './Wrap'
-import useStyles from './styles'
+import useStyles from '../styles'
 
 /**
  * This is a component to render Tabs to hide and show data from a file
@@ -36,7 +37,7 @@ export default function IconTabs() {
           className={classes.tabBtn}
           onClick={() => setVisualize((state) => !state)}
         >
-          {!visualize ? 'Visualize' : 'Go back'}
+          {!visualize ? 'Visualize using random values' : 'Read description'}
         </Button>
 
         <Tabs

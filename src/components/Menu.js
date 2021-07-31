@@ -21,12 +21,14 @@ const Menu = () => {
           AlgoVis
         </Typography>
 
-        <Button color='inherit' disabled>
-          Trees
-        </Button>
         <Button color='inherit'>Sort</Button>
-        <Button color='inherit' disabled>Compare</Button>
-        <Button color='inherit' disabled>TSP</Button>
+        <Button color='inherit'>Sort Input</Button>
+        <Button color='inherit' disabled>
+          Compare
+        </Button>
+        <Button color='inherit' disabled>
+          TSP
+        </Button>
         <Button color='inherit' disabled>
           Graphs
         </Button>

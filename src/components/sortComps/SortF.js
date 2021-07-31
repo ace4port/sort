@@ -3,7 +3,6 @@ import Sketch from 'react-p5'
 
 let values = []
 let clr = []
-let sortT
 
 const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
   const [p, setP] = useState(0)
@@ -13,34 +12,32 @@ const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
 
   useEffect(() => {
     setP(performance.now())
-    return () => {
-      clr.forEach((e) => (e = -1))
-      clearTimeout(sortT)
-    }
+    return () =>
+      setTimeout(
+        clr.forEach((e) => (e = -1)),
+        0
+      )
   }, [])
 
   useEffect(() => {
     return () => {
-<<<<<<< HEAD
-      setTime(((q - p) / 1000).toFixed(2))
-    }
-=======
       setCompp(comp)
       setSwapps(swaps)
     }
   }, [comp, swaps, setCompp, setSwapps])
 
   useEffect(() => {
-    setTime(((q - p) / 1000).toFixed(2))
->>>>>>> input
+    return () => {
+      setTime(((q - p) / 1000).toFixed(2))
+    }
   }, [p, q, setTime])
 
   const setup = async (p5, parentRef) => {
     p5.createCanvas(500, 400).parent(parentRef)
-    values = new Array(arr.length)
-    for (let i = 0; i < arr.length; i++) values[i] = parseInt(arr[i])
+    values = new Array(p5.width / width)
+    for (let i = 0; i < values.length; i++) values[i] = arr[i]
 
-    sortT = setTimeout(() => {
+    setTimeout(() => {
       soort(p5)
       setTimeout(() => setQ(performance.now()), 0)
     }, 0)
@@ -60,7 +57,7 @@ const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
 
   const draw = (p5) => {
     p5.background(0)
-    let w = width * 3
+    let w = width
     for (let i = 0; i < values.length; i++) {
       clr[i] === 0
         ? p5.fill(250, 250, 0)
@@ -71,9 +68,8 @@ const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
         : clr[i] === 3
         ? p5.fill(100, 200, 220)
         : p5.fill(255, 0, 255)
-      p5.rect(i * w, p5.height - values[i] * 20, w, values[i] * 20)
+      p5.rect(i * w, p5.height - values[i], w, values[i])
     }
-    console.log(values)
   }
 
   const bubble = async (arr) => {
@@ -87,7 +83,6 @@ const Sort = ({ width, speed, type, arr, setCompp, setSwapps, setTime }) => {
       }
       clr[i] = -1
     }
-    return
   }
 
   const insertion = async (arr) => {
