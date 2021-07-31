@@ -10,8 +10,8 @@ import SortI from './pages/SortInput'
 import SortR from './pages/SortRandom'
 import Compare from './pages/Compare'
 import Lex from './pages/Lex'
+import Pfa from './pages/Pfa'
 // import Trav from './Pages/Tsm'
-// import Graph from './Pages/Graph'
 // import Tree from './Pages/Tree'
 // import Tsp from './Pages/Tsp'
 
@@ -39,10 +39,10 @@ const App = () => {
         <Route exact path='/lex'>
           <Lex />
         </Route>
-        {/* 
-        <Route exact path='/graph'>
-          <Graph />
+        <Route exact path='/pfa'>
+          <Pfa />
         </Route>
+        {/* 
         <Route exact path='/tree'>
           <Tree />
         </Route>

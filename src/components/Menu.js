@@ -36,9 +36,9 @@ const Menu = () => {
           <Button color='inherit'>TSP</Button>
         </NavLink>
 
-        <Button color='inherit' disabled>
-          Graphs
-        </Button>
+        <NavLink to='/pfa' className={classes.lnk}>
+          <Button color='inherit'>Graphs</Button>
+        </NavLink>
       </Toolbar>
     </AppBar>
   )
